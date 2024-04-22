@@ -1,11 +1,15 @@
 <html>
 <head>
+	<style>
+		img {max-width: 250px;}
+	</style>
 <script>
+
 function affichage(){
 	alert("Tout es OK !");
 }
 function cacher(){
-	document.getElementById('DuTexte').style.display="None";
+	document.getElementById('DuTexte').style.display="none";
 }
 function presenter(){
 	document.getElementById('DuTexte').style.display="Block";
@@ -24,9 +28,29 @@ function controler(){
 <h1>Mes outils</h1>
 <hr/>
 <h2>Boite de dialogue</h2>
+<div>
+    <input type="checkbox" id="DuTexte" name="scales" checked />
+    <label for="scales">Image 1</label>
+  </div>
+<div>
+    <input type="checkbox" id="DuTexte" name="scales" checked />
+    <label for="scales">Image 2</label>
+  </div>
+<div>
+    <input type="checkbox" id="DuTexte" name="scales" checked />
+    <label for="scales">Image 3</label>
+  </div>
 <button onclick="affichage()">Afficher</button>
 <hr/>
-<p id="DuTexte">Ma phrase de texte</p>
+<ul>
+	<li><img src="./Image1.jpg" alt=""> </li>
+	<li><img src="./Image2.jpg" alt=""> </li>
+	<li><img src="./Image3.jpg" alt=""> </li>
+		
+</ul>
+<p id="DuTexte">
+	
+</p>
 <button onclick="presenter()">Presenter</button>
 <button onclick="cacher()">Cacher</button>
 <hr/>
