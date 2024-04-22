@@ -34,8 +34,16 @@
 
         function bouger() {
             var ballX = parseInt(document.getElementById('ball2').getAttribute("cx"));
+            var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
+            var ball2Y = parseInt(document.getElementById('ball2').getAttribute("cy"));
+            document.getElementById('ball2').setAttribute("cy", ballY);
+            console.log(ballY);
+            // if(ballx= 15){
+            //     alert("you win");
+            // }
+
             ballX -= 15;
-                    if (ballX <= 0) { ballX = 885; }
+                    if (ballX <= 0) { ballX = 0; alert("you win"); }
                     document.getElementById('ball2').setAttribute("cx", ballX);
             //Code à créer pour faire bouger la boule enemy
 
