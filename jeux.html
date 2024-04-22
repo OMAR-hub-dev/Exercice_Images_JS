@@ -33,7 +33,10 @@
         }
 
         function bouger() {
-
+            var ballX = parseInt(document.getElementById('ball2').getAttribute("cx"));
+            ballX -= 15;
+                    if (ballX <= 0) { ballX = 885; }
+                    document.getElementById('ball2').setAttribute("cx", ballX);
             //Code à créer pour faire bouger la boule enemy
 
         }
@@ -81,6 +84,7 @@
     <h1>Jeux Javascript</h1>
     <svg id="zonedejeux">
         <circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
+        <circle cx="884" cy="200"stroke="black" r="15" fill="lightblue" id="ball2" />
 
     </svg>
 
