@@ -43,8 +43,8 @@
             // }
 
             ballX -= 15;
-                    if (ballX <= 0) { ballX = 0; alert("you win"); }
-                    document.getElementById('ball2').setAttribute("cx", ballX);
+            if (ballX <= 0) { ballX = 0; alert("you win"); }
+            document.getElementById('ball2').setAttribute("cx", ballX);
             //Code à créer pour faire bouger la boule enemy
 
         }
@@ -68,18 +68,18 @@
                     break;
                 // Haut 
                 case 38:
-               
+
                     ballY -= 15;
                     if (ballY <= 0) { ballY = 15; }
                     document.getElementById('ball').setAttribute("cy", ballY);
                     break;
                 // Bas 
                 case 40:
-                ballY += 15;
+                    ballY += 15;
                     if (ballY >= 400) { ballY = 385; }
                     document.getElementById('ball').setAttribute("cy", ballY);
                     break;
-                    
+
 
             }
 
@@ -92,7 +92,7 @@
     <h1>Jeux Javascript</h1>
     <svg id="zonedejeux">
         <circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
-        <circle cx="884" cy="200"stroke="black" r="15" fill="lightblue" id="ball2" />
+        <circle cx="884" cy="200" stroke="black" r="15" fill="lightblue" id="ball2" />
 
     </svg>
 

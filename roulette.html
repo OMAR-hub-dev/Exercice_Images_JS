@@ -15,8 +15,9 @@
             justify-content: center;
             align-items: center;
            gap: 50px;
+           
         }
-        div{
+        .container{
             margin-top: 6rem;
             /* background-color: bisque; */
             
@@ -27,6 +28,7 @@
             border: 1px solid black;
             border-radius: 5px;
         }
+        label{font-size: 25px;}
         h1{
             font-size: 36px;
             margin: 2rem;
@@ -35,7 +37,7 @@
     </style>
     <body>
         
-        <div>
+        <div class="container">
             <h1>Roulette Russe</h1>
             <svg width="300px" height="300px" style="background-color:rgb(227, 215, 145)">
                 <circle id="C1" cx="150" cy="150" r="140" stroke="black" stroke-width="3" fill="none" style="display:block"/>
@@ -49,6 +51,11 @@
             </svg>
         </div>
         <button>lancer</button>
+        <div>
+            <label for="scales">Nombre de tir : </label>
+            <button class="counter">0</button>
+        </div>
+        
     
         <script src="./roulette.js"></script>
     </body>
