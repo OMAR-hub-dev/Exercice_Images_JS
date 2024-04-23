@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Document" content="aaaaaaaa">
+		<link rel="stylesheet" href="">
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			img {max-width: 250px;}
+			li{list-style-type:none;
+			margin-bottom: 10px;}
+		</style>
+		<h2><a href="./jeu_dé.html">jeu de dé</a></h2>
+	<h1>Mes outils</h1>
+	<hr/>
+	<h2>Boite de dialogue</h2>
+	<div>
+		<input type="checkbox"  name="image1"  id ='control'/>
+		<label for="scales">Image 1</label>
+	  </div>
+	<div>
+		<input type="checkbox"  name="image2"  id ='control2'/>
+		<label for="scales">Image 2</label>
+	  </div>
+	<div>
+		<input type="checkbox"  name="image3" id ='control3'/>
+		<label for="scales">Image 3</label>
+	  </div>
+	<button onclick="affichage()">Afficher</button>
+	<hr/>
+	<ul>
+		<li><img  id='image1' src="./Image1.jpg" alt="image1"> </li>
+		<li><img  id='image2' src="./Image2.jpg" alt="image2"> </li>
+		<li><img id='image3' src="./Image3.jpg"  alt="image3"> </li>
+			
+	</ul>
+	<p id="DuTexte">
+		
+	</p>
+	<button onclick="presenter()">Presenter</button>
+	<button onclick="cacher()">Cacher</button>
+	<hr/>
+	<p>Option<input type="checkbox" id="Control"></p>
+	<button onclick="controler()">Check</button>
+		<script src="./index.js"></script>
+	</body>
+</html>
