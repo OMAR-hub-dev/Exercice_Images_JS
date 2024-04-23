@@ -1,73 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Document" content="aaaaaaaa">
-        <link rel="stylesheet" href="">
-        <title>Document</title>
-    </head>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column; 
-            justify-content: center;
-            align-items: center;
-           gap: 30px;
-           
-        }
-        .container{
-            margin-top: 6rem;
-            /* background-color: bisque; */
-            
-        }
-        button{
-            background-color: rgb(231, 187, 100);
-            font-size: 25px;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
-        label, span{font-size: 25px;}
-        h1{
-            font-size: 36px;
-            margin: 2rem;
-            text-align: center;
-        }
-        .somme{
-            background-color:  rgb(127, 94, 83);
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 10px;
-            color: white;
-        }
-    </style>
-    <body>
-        
-        <div class="container">
-            <h1>Roulette Russe</h1>
-            <svg width="300px" height="300px" style="background-color:rgb(227, 215, 145)">
-                <circle id="C1" cx="150" cy="150" r="140" stroke="black" stroke-width="3" fill="none" style="display:block"/>
-                <circle id="C2" cx="150" cy="150" r="15" stroke="black" stroke-width="3" fill="" style="display:block"/>
-                <circle class="circles" id="C3" cx="150" cy="55" r="30" stroke="black" stroke-width="3" fill="gray" style="display:block"/>
-                <circle class="circles" id="C4" cx="235" cy="105" r="30" stroke="black" stroke-width="3" fill="gray" style="display:block"/>
-                <circle class="circles" id="C5" cx="235" cy="200" r="30" stroke="black" stroke-width="3" fill="gray" style="display:block"/>
-                <circle class="circles" id="C6" cx="150" cy="250" r="30" stroke="black" stroke-width="3" fill="gray" style="display:block"/>
-                <circle class="circles" id="C7" cx="60" cy="105" r="30" stroke="black" stroke-width="3" fill="gray" style="display:block"/>
-                <circle class="circles" id="C8" cx="65" cy="200" r="30" stroke="black" stroke-width="3" fill="gray" style="display:block"/>
-            </svg>
-        </div>
-        <button>lancer</button>
-        <div>
-            <label for="scales">Nombre de tir : </label>
-            <span class="counter">0</span>
-        </div>
-        <div class="somme">
-            <label for="scales">La somme gagnée : </label>
-            <span >0</span>
-        </div>
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <meta name="Document" content="aaaaaaaa">
+    <link rel="stylesheet" href="">
+    <title>Roulette Russe</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    .container {
+        margin-top: 4rem;
+        /* background-color: bisque; */
+
+    }
+
+    button {
+        background-color: rgb(231, 187, 100);
+        font-size: 25px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    label,
+    span {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 36px;
+        /* margin: 2rem 0rem; */
+        text-align: center;
+    }
+
     
-        <script src="./roulette.js"></script>
-    </body>
+
+    .vainqueur {
+        color: rgb(92, 162, 99);
+        font-size: 30px;
+    }
+
+    i {
+        margin-right: 20px;
+        color: red;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <h1>Roulette Russe</h1>
+        <svg width="300px" height="300px" style="background-color:rgb(227, 215, 145)">
+            <circle id="C7" cx="150" cy="150" r="140" stroke="black" stroke-width="3" fill="none"
+                style="display:block" />
+            <circle id="C8" cx="150" cy="150" r="13" stroke="black" stroke-width="3" fill="" style="display:block" />
+            <circle class="circles" id="C3" cx="150" cy="55" r="30" stroke="black" stroke-width="3" fill="gray"
+                style="display:block" />
+            <circle class="circles" id="C4" cx="235" cy="105" r="30" stroke="black" stroke-width="3" fill="gray"
+                style="display:block" />
+            <circle class="circles" id="C5" cx="235" cy="200" r="30" stroke="black" stroke-width="3" fill="gray"
+                style="display:block" />
+            <circle class="circles" id="C6" cx="150" cy="250" r="30" stroke="black" stroke-width="3" fill="gray"
+                style="display:block" />
+            <circle class="circles" id="C1" cx="60" cy="105" r="30" stroke="black" stroke-width="3" fill="gray"
+                style="display:block" />
+            <circle class="circles" id="C2" cx="65" cy="200" r="30" stroke="black" stroke-width="3" fill="gray"
+                style="display:block" />
+        </svg>
+    </div>
+    <button>lancer</button>
+    <div>
+        <label for="scales">Nombre de tir : </label>
+        <span class="counter">0</span><span> (max 3 /jeu)</span>
+    </div>
+    <div >
+        <label for="scales">La somme gagnée : </label>
+        <span class="somme">0</span> <label for=""> €</label>
+    </div>
+    <div class="nouveau">
+        <label for=""><i class="ion-ios-plus-outline"></i></label>
+        <span>Nouveau Jeu</span>
+
+    </div>
+
+
+    <script src="./roulette.js"></script>
+</body>
+
 </html>
