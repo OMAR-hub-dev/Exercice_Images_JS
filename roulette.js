@@ -36,7 +36,7 @@ lancer.addEventListener('click', ()=>{
     // console.log('ok');
     const valeur = Math.floor((Math.random() * 6)+1);
         
-    if (tir < 3){
+    if (tir < 2){
         tir++; 
         counter.innerHTML = tir; 
         if(document.getElementById(`C${valeur}`).style.fill == 'red' ){ 
