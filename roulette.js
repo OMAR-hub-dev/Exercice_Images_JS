@@ -1,4 +1,4 @@
-const lancer = document.querySelector('button');
+const lancer = document.querySelector('.lancer');
 const circles = document.querySelectorAll('.circles');
 const counter = document.querySelector('.counter');
 const somme = document.querySelector('.somme');
@@ -30,7 +30,7 @@ nouveau.addEventListener('click',()=>{
     
 });
 
-// **********  gérer les choix de bouton jouer   *****************************
+// **********  gérer les choix de bouton lancer   *****************************
 
 lancer.addEventListener('click', ()=>{
     // console.log('ok');

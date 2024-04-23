@@ -13,7 +13,7 @@
     <title>Roulette Russe</title>
 </head>
 <style>
-    body {
+    .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -22,17 +22,14 @@
 
     }
 
-    .container {
-        margin-top: 4rem;
-        /* background-color: bisque; */
 
-    }
 
-    button {
+    .lancer {
         background-color: rgb(231, 187, 100);
         font-size: 25px;
         border: 1px solid black;
         border-radius: 5px;
+        padding:5px;
     }
 
     label,
@@ -46,21 +43,24 @@
         text-align: center;
     }
 
-    
+
 
     .vainqueur {
         color: rgb(92, 162, 99);
         font-size: 30px;
     }
-
-    i {
-        margin-right: 20px;
+    i{
         color: red;
         font-size: 30px;
+        margin-right: 10px;
     }
+
+
+    
 </style>
 
 <body>
+    
     <div class="container">
 
         <h1>Roulette Russe</h1>
@@ -81,21 +81,23 @@
             <circle class="circles" id="C2" cx="65" cy="200" r="30" stroke="black" stroke-width="3" fill="gray"
                 style="display:block" />
         </svg>
+        <span class="lancer">lancer</span>
+        <div>
+            <label for="scales">Nombre de tir : </label>
+            <span class="counter">0</span><span> (max 3 /jeu)</span>
+        </div>
+        <div>
+            <label for="scales">La somme gagnée : </label>
+            <span class="somme">0</span> <label for=""> €</label>
+        </div>
+        <div class ="nouveau">
+            <i class="ion-ios-plus-outline"></i>
+            <label for="scales"> Nouveau jeu </label>
+            
+        </div>
     </div>
-    <button>lancer</button>
-    <div>
-        <label for="scales">Nombre de tir : </label>
-        <span class="counter">0</span><span> (max 3 /jeu)</span>
-    </div>
-    <div >
-        <label for="scales">La somme gagnée : </label>
-        <span class="somme">0</span> <label for=""> €</label>
-    </div>
-    <div class="nouveau">
-        <label for=""><i class="ion-ios-plus-outline"></i></label>
-        <span>Nouveau Jeu</span>
 
-    </div>
+
 
 
     <script src="./roulette.js"></script>
