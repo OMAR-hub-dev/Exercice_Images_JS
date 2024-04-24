@@ -57,9 +57,10 @@ lancer.addEventListener('click', ()=>{
             // somme.textContent = total ;
             somme.textContent = total        
         }else{
-            document.getElementById(`C${valeur}`).style.fill = 'blue';
+            
             titre.textContent = "Malheuresement vous avez tout perdu !!!";
             titre.classList.add('perdu')
+            document.getElementById(`C${valeur}`).style.fill = 'blue';
             somme.textContent = 0 ;
         }
       
