@@ -43,7 +43,7 @@ lancer.addEventListener('click', ()=>{
     // console.log('ok');
     const valeur = Math.floor((Math.random() * 6)+1);
         
-    if (tir < 2){
+    if (tir < 1){
         tir++; 
         counter.innerHTML = tir; 
         if(document.getElementById(`C${valeur}`).style.fill !== 'red' ){ 
@@ -58,6 +58,8 @@ lancer.addEventListener('click', ()=>{
             somme.textContent = total        
         }else{
             document.getElementById(`C${valeur}`).style.fill = 'blue';
+            titre.textContent = "Malheuresement vous avez tout perdu !!!";
+            titre.classList.add('perdu')
             somme.textContent = 0 ;
         }
       
