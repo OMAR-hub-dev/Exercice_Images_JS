@@ -12,9 +12,16 @@ let total= 0;
 // **********  gérer les choix de boutons rouges   *****************************
 circles.forEach((circle)=>{
     circle.addEventListener('click',()=>{
-        if(choix <3) {
-       circle.style.fill = 'red';
         choix++;
+        if(choix <4) {
+       circle.style.fill = 'red';
+        
+       
+        }
+        else{
+
+            alert('maxi 3');
+
         }
     })
 });
@@ -39,7 +46,7 @@ lancer.addEventListener('click', ()=>{
     if (tir < 2){
         tir++; 
         counter.innerHTML = tir; 
-        if(document.getElementById(`C${valeur}`).style.fill == 'red' ){ 
+        if(document.getElementById(`C${valeur}`).style.fill !== 'red' ){ 
             titre.textContent = "bravo vous avez gagné !!!";
             titre.classList.add('vainqueur')           
             document.getElementById(`C${valeur}`).style.fill = 'blue';
@@ -49,7 +56,10 @@ lancer.addEventListener('click', ()=>{
             if (choix ==3) {  total += 1000000;    } 
             // somme.textContent = total ;
             somme.textContent = total        
-        }else{document.getElementById(`C${valeur}`).style.fill = 'blue';}
+        }else{
+            document.getElementById(`C${valeur}`).style.fill = 'blue';
+            somme.textContent = 0 ;
+        }
       
     }
     
